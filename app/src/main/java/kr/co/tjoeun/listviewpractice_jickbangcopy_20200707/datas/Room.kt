@@ -19,4 +19,19 @@ class Room(val price:Int, val address : String, val floor:Int, val description :
 
     }
 
+    fun getFormatedFloor() : String {
+//        지상층(1이상) / 반지하(0) / 지하(-1 이하)
+        if (this.floor >=1) {
+            return "${this.floor}층"
+        }
+        else if (this.floor ==0){
+            return "반지하"
+        }
+        else {
+//            들어있는 값이 음수일 경우 정수로 만듬
+            return "지하 ${-1*this.floor}층"
+        }
+
+    }
+
 }
