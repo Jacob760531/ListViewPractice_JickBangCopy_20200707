@@ -29,6 +29,15 @@ class RoomAdapter(val mContext : Context, val resId : Int, val mList : List<Room
 //        val floor   = row.findViewById<TextView>(R.id.)
         val description = row.findViewById<TextView>(R.id.descriptionTxt)
 
+
+
+        price.text = data.price.toString()
+        address.text = data.address + data.floor
+        description.text = data.description
+
+        return row
+
+
     }
 
 
