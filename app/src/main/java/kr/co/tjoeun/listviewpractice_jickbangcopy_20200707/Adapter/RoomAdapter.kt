@@ -31,7 +31,7 @@ class RoomAdapter(val mContext : Context, val resId : Int, val mList : List<Room
 
 
 
-        price.text = data.price.toString()
+        price.text = data.getFormatedPrice()
         address.text = data.address + data.floor
         description.text = data.description
 
