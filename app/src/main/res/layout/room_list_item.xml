@@ -13,7 +13,6 @@
             android:layout_height="100dp"
             android:src="@mipmap/ic_launcher"
             android:scaleType="centerCrop" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,6 +21,7 @@
             android:gravity="center_vertical">
 
             <TextView
+                android:id="@+id/priceTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
@@ -30,15 +30,17 @@
                 android:text="8,000" />
 
             <TextView
+                android:id="@+id/addressTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="마포구 서교동,1층"
                 android:textColor="#000000"/>
 
             <TextView
+                android:id="@+id/descriptionTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="망원/홍대역 주변 10초"
+                android:text="망원/홍대역 주변 10초" />
 
 
 
