@@ -1,5 +1,6 @@
 package kr.co.tjoeun.listviewpractice_jickbangcopy_20200707
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -23,10 +24,17 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
         roomListView.setOnItemClickListener { parent, view, position, id ->
             val clickedRoom = mRoomList[position]
 
 //            눌린 방의 정보를 상세화면에 전달.
+            val myIntent = Intent(mContext,ViewRoomDetailActivity::class.java)
+
+//            putExtra로 방 정보 첨부 => 방 데이터를 한꺼번에 첨부
+            myIntent.putExtra("room", clickedRoom)
+
+            startActivity(myIntent)
         }
     }
 

@@ -1,6 +1,8 @@
 package kr.co.tjoeun.listviewpractice_jickbangcopy_20200707.datas
 
-class Room(val price:Int, val address : String, val floor:Int, val description : String) {
+import java.io.Serializable
+
+class Room(val price:Int, val address : String, val floor:Int, val description : String) : Serializable {
 
     fun getFormatedPrice() : String {
 // 1억이 초과 미만에 따라 다르게
