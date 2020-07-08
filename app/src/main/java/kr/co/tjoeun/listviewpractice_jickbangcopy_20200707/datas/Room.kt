@@ -16,7 +16,6 @@ class Room(val price:Int, val address : String, val floor:Int, val description :
 //            1억이 안되는 경우 => 8,500만원 가공
             return String.format("%,d만원",this.price)
         }
-
     }
 
     fun getFormatedFloor() : String {
@@ -31,7 +30,5 @@ class Room(val price:Int, val address : String, val floor:Int, val description :
 //            들어있는 값이 음수일 경우 정수로 만듬
             return "지하 ${-1*this.floor}층"
         }
-
     }
-
 }
